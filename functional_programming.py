@@ -1,6 +1,6 @@
 # exercise 1
 """Filtruje z iterable elementy, dla których funkcja func zwraca False zostawiając pozostałe"""
-
+"" "Filters with iterable elements for which the function func returns False leaving the remaining" ""
 
 def _filter(func=None, iterable=[]):
     if func:
@@ -27,6 +27,7 @@ print(' ')
 # exercise 2
 def _map(func, iterable, *args):
     """Mapuje elementy iterable na wartości fuknckji func"""
+    "" "Maps iterable elements to fuknckji func values" ""
     for i in zip(iterable, *args):
         yield func(*i)
 
@@ -42,7 +43,7 @@ print(' ')
 
 # exercise 3
 """Zwraca listę odwróconych słowa które nie są palindromami."""
-
+"""Zwraca listę odwróconych słowa które nie są palindromami."""
 
 def reverse_nonpalindromes(words):
     return list(map(lambda w: w[::-1], filter(lambda w: w != w[::-1], words)))
@@ -55,6 +56,7 @@ print(' ')
 
 # exercise 4
 """Zwraca sumę kwadratów nieparzystych liczb"""
+"" "Returns the sum of squares of odd numbers" ""
 from functools import reduce
 
 
@@ -69,6 +71,7 @@ print(squares_of_odds([10, 13, 5, 6]) == 194)
 print(' ')
 # exercise 5
 """zwraca czy wszystkie liczby są dodatnie"""
+"" "returns if all numbers are positive" ""
 
 
 def all_are_positive(numbers):
@@ -84,7 +87,7 @@ print(' ')
 
 # exercise 6
 """Przepisz poniższą funkcję korzystając wyłącznie z funkcji reduce, map i filter oraz lambd"""
-
+"" "Rewrite the following function using only the reduce, map and filter and lambd functions"""
 
 def flatten(lists):
     return reduce(lambda x, y: x + y, lists)
@@ -98,7 +101,7 @@ print(' ')
 
 # exercise 7
 """Konwertuje liste temperatur w stopniach Celsjusza do skali Fahrenheita"""
-
+"" "Converts list of temperatures in degrees Celsius to Fahrenheit scale" ""
 
 def celsius_to_fahrenheit(x):
     return map(lambda yy: 1.8 * yy + 32, x)
@@ -111,6 +114,7 @@ print(' ')
 
 # zadaninie 8
 """Zwraca iloczyn liczb w liście x większych od k"""
+"" "Returns the product of numbers in list x greater than k" ""
 from functools import reduce
 
 
@@ -128,7 +132,7 @@ from functools import reduce
 
 # exercise 9
 """Łączy słowa (o długości co najmniej k) z listy x w zdanie - nie używa reduce"""
-
+"" "Combines words (at least k length) from the list x in the sentence - does not use reduce" ""
 
 def create_sentence(x, k=0):
     return ' '.join(filter(lambda x: len(x) >= k, x))
@@ -142,7 +146,8 @@ print(' ')
 # zadani 10
 """Zwraca k-elementową krotke składającą się z kolejnych elementów list podanych jako arguemnty pozycyjne, 
   jeżeli ich suma jest większa niż parametr k"""
-
+"""Returns the k-element tuple consisting of subsequent elements of the lists given as positional arguments,
+   if their sum is greater than the parameter k """
 
 def tuple_if_sum_greater(k, *lists):
     return filter(lambda x: sum(x) > k, zip(*lists))
@@ -156,6 +161,7 @@ print(list(tuple_if_sum_greater(0, [1, 2], [3, 4], [5, 6])) == [(1, 3, 5), (2, 4
 print(' ')
 # exercise 11
 """Zwraca zbiór liczb pierwszych od 0 do N włącznie"""
+"" "Returns a set of prime numbers from 0 to N inclusive" ""
 from math import sqrt
 
 

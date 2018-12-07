@@ -22,6 +22,7 @@ print("{0:.3} grams per minute".format(flow))
 from time import time
 
 """ Wypisuje czas wywołania udekorowanej funckji """
+"""Prints the time to call the decorated function"""
 
 
 def timeit(func):
@@ -62,6 +63,9 @@ m = squares_map(n)
    Zwraca pochodną funkcji w punkcie, wg. wzoru f'(x) = [f(x+h) - f(x)]/h, 
    gdzie h jest parametrem dekoratora, jeśli nie zostanie podany, należy przyjąć 1000 * epsilon maszynowy
    """
+"""
+    Returns the derivative of a function at a point, acc. the formula f '(x) = [f (x + h) - f (x)] / h, where h is a parameter of the decorator, if not given, use 1000 * epsilon machine
+"""
 import sys
 
 sys.float_info.epsilon  # epsilon maszynowy
@@ -109,7 +113,7 @@ for x in [random() * 1000. for _ in range(20)]:
 # exercise 4
 """Sprawdza czy udekorowanej funckji zostały podane odpowiednie parametry zdefiniowane 
        w argumentach dekoratora"""
-
+"" "Checks whether the decorated functions have been given the appropriate parameters defined in the decorator arguments "" "
 
 def accepts(*types):
     def decorator(function):

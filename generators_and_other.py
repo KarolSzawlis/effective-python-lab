@@ -1,5 +1,6 @@
 # exercise 1 a
 '''Napisz funkcję, która wypisuje wiadomość opcjonalnie wraz z podaną wartością'''
+'''Write a function that prints the message optionally with the given value'''
 
 
 def log(*args):
@@ -8,6 +9,7 @@ def log(*args):
 
 # exercise 1 b
 """Zwraca średnią liczb podanych jako argumenty pozycyjne"""
+'''Returns the average of the numbers given as positional arguments'''
 
 
 def mean(*args):
@@ -21,6 +23,7 @@ print(mean(1, 2, 3, 4, 5, 61, 2, 12, 123, 123) == 33.6)
 print(' ')
 # exercise 1 c
 """Sprawdza, czy w danym słowniku znajduje się conajmniej podana liczba elementów"""
+'''Checks whether the given minimum number of elements is in the given dictionary'''
 
 
 def check_dictionary_content(d, **kwargs):
@@ -41,6 +44,7 @@ print(check_dictionary_content(d, **d) == True)
 print('  ')
 # exercise 2
 '''Napisz funkcję która dla listy liczb zwróci listę częściowych udziałów w sumie tych liczb'''
+'''Write a function that returns a list of partial shares to the sum of these numbers for the list of numbers'''
 
 
 def numbers_to_percents(values):
@@ -56,6 +60,9 @@ print(' ')
 # exercise 3a
 '''
 a) Napisz funkcję zwroc_rosnace która dostanie na wejsciu funkcje jednoargumentową oraz argumenty do niej a następnie zwróci te argumenty dla których wynik jest większy od argumentu'''
+'''
+a) Write a return function that will get unary functions on the input and arguments to it, and then return those arguments for which the result is greater than the argument 
+'''
 
 
 def zwroc_rosnace(f, *ags):
@@ -85,6 +92,10 @@ print(' ')
 b) Dopisz drugą, podobną funkcję która będzie zwracać argumenty których wyniki są większe od wyników poprzedniego argumentu
 '''
 
+'''
+b) Add a second, similar function that will return arguments whose results are greater than the results of the previous argument
+'''
+
 
 def zwroc_rosnace2(f, *args):
     return [args[a] for a in range(1, len(args)) if f(args[a]) > f(args[a - 1])]
@@ -111,6 +122,9 @@ print(' ')
 '''
 Napisz funkcję która będzie zwracała który raz jest wywoływana
 '''
+'''
+Write a function that will return which one is called once
+'''
 a = 0
 
 
@@ -127,6 +141,7 @@ print(ile_wywolana() == 3)
 print(' ')
 # exercise 5
 'Napisz generator zwracający nieskończony ciąg licz pierwszych'
+'Write a generator that returns an infinite sequence of prime numbers'
 
 
 def is_prime(n):
@@ -154,9 +169,9 @@ print(' ')
 
 print('exercise 6a')
 # exercise 6 a
-'''
-Uzupełnij definicje poniższych funkcji/generatorów.'''
+
 """Tworzy generator liczb naturalnych od liczby k"""
+'''Creates a natural number generator from the number k'''
 
 
 def natural_numbers(k=0):
@@ -182,6 +197,7 @@ for i, n in enumerate(natural_numbers(1)):
 print(' ')
 # exercise 6 b
 """Tworzy generator kolejnych silnii"""
+"" "Creates a generator of next factorials" ""
 
 
 def factorials():
@@ -210,6 +226,7 @@ print(' ')
 
 # exercise 7
 '''Napisz generator nieskończonego ciągu liczb Fibonacciego.'''
+'' 'Write a generator of an infinite sequence of Fibonacci numbers.' ''
 
 
 def fibonacci():

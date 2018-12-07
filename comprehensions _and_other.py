@@ -1,6 +1,7 @@
 # exercise 1
 """ Sprawdza czy podane wyrazy są anagramami """
 
+"" "Checks if the given words are anagrams" ""
 
 def check_anagram(first, second):
     return sorted(first) == sorted(second)
@@ -13,9 +14,11 @@ def check_anagram(first, second):
 
 
 def gaderypoluki(text, key):
-    """
-    Funkcja powinna szyfrować (lub odszyfrować) tekst szyfrem GADERYPOLUKI (lub podobnym)
-    https://pl.wikipedia.org/wiki/Gaderypoluki
+    """ The function should
+    encrypt( or decrypt) the
+    text
+    with GADERYPOLUKI( or similar)
+    https: // pl.wikipedia.org / wiki / Gaderypoluki
     """
     key = key.lower()
     text = text.lower()
@@ -36,10 +39,12 @@ print(' ')
 '''Zapisz każdą z poniższych 4 funkcji w postaci list/dict/set comprehension. Nie należy używać żadnych zmiennych tymczasowych ani dodatkowych linii, każda funkcja ma zostać wyrażona w postaci: 
 def FUNKCJA(ARGUMENTY):
     return COMPREHENSION'''
-
+'''Write each of the following 4 functions in the form of list / dict / set comprehension. Do not use any temporary variables or additional lines, each function is to be expressed in the form:
+def FUNCTION (ARGUMENTS):
+     return COMPREHENSION '''
 # exercise 2
 """Zwraca podlistę "data" zawierającą wyłącznie parzyste liczby"""
-
+"" "Returns the data sub-list containing only even numbers" ""
 
 def even_numbers_from_list(data):
     return [d for d in data if d % 2 == 0]
@@ -54,7 +59,7 @@ print(' ')
 
 # exercise 3
 """Zwraca listę trójek, gdzie i'ta trójka to (i, i'te słowo, długość i'tego słowa)"""
-
+"" "Returns a list of triples, where i and threes are (i, i'te word, length i'th words)" ""
 
 def words_analyze(words):
     return [(words.index(word), word, len(word)) for word in words]
@@ -69,7 +74,8 @@ print(' ')
 """Zwraca słownik gdzie kluczami są wszystkie słowa występujące w tekście
     rozpoczynające się na zadaną literę, a wartością ile razy wystąpiy"""
 
-
+"""Returns a dictionary where the keys are all words appearing in the text
+     beginning with a given letter, and the number of times appears"""
 def count_words_starting_with_given_letter(text, letter):
     return {word: len([w for w in text.split() if w == word]) for word in text.split() if word[0] == letter}
 
@@ -89,6 +95,15 @@ print(' ')
     sumie zbiorów kluczy ze słowników a i b. Gdy jakiś klucz występuje w obu słownikach, to wartość ma być
     wynikiem funkcji f obliczonej na wartościach dla danego klucza w słowniku a i słowniku b
     '''
+'''
+The function accepts:
+     - two dictionaries a and b
+     - the two-argument function f
+     Function as a result should return a dictionary, which will be the sum of two dictionaries.
+     The sum of two dictionaries should be understood as a dictionary in which the set of keys will be equal
+     sum of key sets from dictionaries a and b. When a key exists in both dictionaries, the value is to be
+     the result of the function f calculated on the values for a given key in dictionary a and dictionary b
+'''
 
 
 def merge_dicts(a, b, f):
@@ -110,7 +125,7 @@ from math import sqrt
 
 # exercise 6
 """Zwraca zbiór liczb pierwszych od 0 do N włącznie"""
-
+'''Returns a set of prime numbers from 0 to N inclusive'''
 
 def primes(N):
     return {prime_number for prime_number in range(2, N + 1) if
@@ -127,8 +142,10 @@ print(' ')
 Wykorzystując znieżdzenia generatorów list (https://www.python.org/dev/peps/pep-0202/) napisz funkcje, która
 wypisze wszystkie pary (x,y) gdzie 0 < x < n oraz 0 < y < n
 '''
-
-
+'''
+Using the list of letter generators (https://www.python.org/dev/peps/pep-0202/) write the functions that
+will print all pairs (x, y) where 0 <x <n and 0 <y <n
+'''
 def func1(n):
     return [(x, y) for x in range(n) for y in range(n)]
 
@@ -142,6 +159,9 @@ print(' ')
 wypisze tylko takie pary dla których x < y
 '''
 
+'''
+will print only pairs for which x <y
+'''
 
 def func2(n):
     return [(x, y) for x in range(n) for y in range(n) if x < y]
@@ -156,7 +176,9 @@ print(' ')
 '''
 wypisze tylko takie pary dla których x > y
 '''
-
+'''
+will print only pairs for which x >y
+'''
 
 def func3(n):
     return [(x, y) for x in range(n) for y in range(n) if x > y]
@@ -172,7 +194,9 @@ print(' ')
 Napisz funkcję powerset, która zwróci listę wszystkich podzbiorów zadanej listy przekazanej jako argument
 '''
 
-
+'''
+Write the function powerset, which will return a list of all subsets of the given list passed as an argument
+'''
 def powerset(x):
     result = [[]]
     for item in x:
