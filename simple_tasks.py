@@ -1,5 +1,6 @@
 # exercise 1
 """Funkcja powinna zwrócić średnią arytmetyczną elementów na liście 'input'"""
+"" "The function should return the arithmetic mean of elements in the input list" ""
 
 
 def avg(input):
@@ -14,6 +15,7 @@ print(' ')
 
 # exercise 2
 """Funkcja powinna zwrocic liste liczb parzystych <= n"""
+"" "The function should return a list of even numbers <= n" ""
 
 
 def even_list(n):
@@ -30,7 +32,7 @@ print(' ')
 
 # exercise 3
 """ Funkcja powinna zwrócić sumę kwadratów liczb od 1 do n włącznie """
-
+"" "The function should return the sum of the squares of numbers from 1 to n inclusive" ""
 
 def sum_of_squares(n):
     result = [nn * nn for nn in range(n + 1)]
@@ -45,7 +47,7 @@ print(' ')
 
 # exercise 4
 """ Funckja powinna zwrócić sume wszystkich dodatnich wieloktrotności parametru k mniejszych niż n """
-
+"" "The function should return the sum of all positive multiplicities of parameter k smaller than n" ""
 
 def sum_of_multiples(k, n=101):
     result = [k * p for p in range(n + 1) if k * p < n]
@@ -60,6 +62,7 @@ print(' ')
 
 # exercise 5
 """ Funkcja powinna zwrócić liste liczb pierwszych mniejszych od n """
+"" "The function should return a list of prime numbers smaller than n" ""
 
 
 def primes_less_than(n):
@@ -73,6 +76,7 @@ print(primes_less_than(20) == [2, 3, 5, 7, 11, 13, 17, 19])
 print(' ')
 # exercise 6
 """ Funkcja sprawdza czy *word* jest palindromem """
+"" "The function checks if * word * is a palindrome" ""
 
 
 def is_palindrome(word):
@@ -88,7 +92,7 @@ print(' ')
 
 # exercise 7
 """ Zwraca liczbę unikalnych znaków w słowie. Możemy założyć, że słowo składa się z małych liter alfabetu angielskiego """
-
+"" "Returns the number of unique characters in a word. We can assume that the word consists of lowercase letters of the English alphabet" ""
 
 def how_many_different_letters(word):
     return len(set(word))
@@ -105,6 +109,10 @@ print(' ')
 def list_to_table(word):
     """ Funkcja przyjmuje 9-elementową liste i na jej podstawie tworzy stringa z HTMLową tabelą orzmiaru 3x3
     reprezentującą plansze do gry w kółko i krzyżyk"""
+    """The function accepts a 9-element list and on the basis it creates a string with an HTML table 3x3
+    representing
+    boards
+    for playing the noughts and crosses """
     board = '<table style="table-layout: fixed; height: 90px; width: 90px;">'
 
     # twoj kod
@@ -133,7 +141,7 @@ print(zaprzyjaznione(13000) == [(220, 284), (1184, 1210), (2620, 2924), (5020, 5
 # exercise 8
 '''  Funkcja powinna sprawdzać, czy dana liczba n jest doskonała
     https://pl.wikipedia.org/wiki/Liczba_doskona%C5%82a'''
-
+'' 'The function should check if the number n is perfect https://pl.wikipedia.org/wiki/Liczba_doskona%C5%82a '''
 
 def is_perfect(n):
     div = [k for k in range(1, int((n + 2) / 2)) if n % k == 0]
@@ -149,7 +157,7 @@ print(' ')
 import fractions
 
 """Funkcja powinna zwrócić wartość funkcji phi Eulera"""
-
+"" "The function should return the value of the phi Euler function" ""
 
 def phi_euler(n):
     amount = 0
@@ -165,12 +173,7 @@ print(phi_euler(64) == 32)
 print(phi_euler(97) == 96)
 print(' ')
 
-# exercise 11
-'''
-Dla zadanej tablicy o długości  zawierającej liczby całkowite większe od zera. Chcemy znaleźć podtablice, że  kolejnych 
-m elementów sumuje się do d.
-W czasie liniowym
-'''
+
 import re
 
 
