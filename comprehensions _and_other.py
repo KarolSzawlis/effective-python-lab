@@ -3,6 +3,7 @@
 
 "" "Checks if the given words are anagrams" ""
 
+
 def check_anagram(first, second):
     return sorted(first) == sorted(second)
 
@@ -46,6 +47,7 @@ def FUNCTION (ARGUMENTS):
 """Zwraca podlistę "data" zawierającą wyłącznie parzyste liczby"""
 "" "Returns the data sub-list containing only even numbers" ""
 
+
 def even_numbers_from_list(data):
     return [d for d in data if d % 2 == 0]
 
@@ -60,6 +62,7 @@ print(' ')
 # exercise 3
 """Zwraca listę trójek, gdzie i'ta trójka to (i, i'te słowo, długość i'tego słowa)"""
 "" "Returns a list of triples, where i and threes are (i, i'te word, length i'th words)" ""
+
 
 def words_analyze(words):
     return [(words.index(word), word, len(word)) for word in words]
@@ -76,6 +79,8 @@ print(' ')
 
 """Returns a dictionary where the keys are all words appearing in the text
      beginning with a given letter, and the number of times appears"""
+
+
 def count_words_starting_with_given_letter(text, letter):
     return {word: len([w for w in text.split() if w == word]) for word in text.split() if word[0] == letter}
 
@@ -127,6 +132,7 @@ from math import sqrt
 """Zwraca zbiór liczb pierwszych od 0 do N włącznie"""
 '''Returns a set of prime numbers from 0 to N inclusive'''
 
+
 def primes(N):
     return {prime_number for prime_number in range(2, N + 1) if
             not any(prime_number % y == 0 for y in range(2, prime_number))}
@@ -146,6 +152,8 @@ wypisze wszystkie pary (x,y) gdzie 0 < x < n oraz 0 < y < n
 Using the list of letter generators (https://www.python.org/dev/peps/pep-0202/) write the functions that
 will print all pairs (x, y) where 0 <x <n and 0 <y <n
 '''
+
+
 def func1(n):
     return [(x, y) for x in range(n) for y in range(n)]
 
@@ -162,6 +170,7 @@ wypisze tylko takie pary dla których x < y
 '''
 will print only pairs for which x <y
 '''
+
 
 def func2(n):
     return [(x, y) for x in range(n) for y in range(n) if x < y]
@@ -180,6 +189,7 @@ wypisze tylko takie pary dla których x > y
 will print only pairs for which x >y
 '''
 
+
 def func3(n):
     return [(x, y) for x in range(n) for y in range(n) if x > y]
 
@@ -197,6 +207,8 @@ Napisz funkcję powerset, która zwróci listę wszystkich podzbiorów zadanej l
 '''
 Write the function powerset, which will return a list of all subsets of the given list passed as an argument
 '''
+
+
 def powerset(x):
     result = [[]]
     for item in x:

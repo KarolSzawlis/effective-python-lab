@@ -115,6 +115,7 @@ for x in [random() * 1000. for _ in range(20)]:
        w argumentach dekoratora"""
 "" "Checks whether the decorated functions have been given the appropriate parameters defined in the decorator arguments "" "
 
+
 def accepts(*types):
     def decorator(function):
         def wrapper(*args, **kwargs):

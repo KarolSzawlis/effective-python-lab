@@ -34,6 +34,7 @@ print(' ')
 """ Funkcja powinna zwrócić sumę kwadratów liczb od 1 do n włącznie """
 "" "The function should return the sum of the squares of numbers from 1 to n inclusive" ""
 
+
 def sum_of_squares(n):
     result = [nn * nn for nn in range(n + 1)]
     return sum(result)
@@ -48,6 +49,7 @@ print(' ')
 # exercise 4
 """ Funckja powinna zwrócić sume wszystkich dodatnich wieloktrotności parametru k mniejszych niż n """
 "" "The function should return the sum of all positive multiplicities of parameter k smaller than n" ""
+
 
 def sum_of_multiples(k, n=101):
     result = [k * p for p in range(n + 1) if k * p < n]
@@ -93,6 +95,7 @@ print(' ')
 # exercise 7
 """ Zwraca liczbę unikalnych znaków w słowie. Możemy założyć, że słowo składa się z małych liter alfabetu angielskiego """
 "" "Returns the number of unique characters in a word. We can assume that the word consists of lowercase letters of the English alphabet" ""
+
 
 def how_many_different_letters(word):
     return len(set(word))
@@ -143,6 +146,7 @@ print(zaprzyjaznione(13000) == [(220, 284), (1184, 1210), (2620, 2924), (5020, 5
     https://pl.wikipedia.org/wiki/Liczba_doskona%C5%82a'''
 '' 'The function should check if the number n is perfect https://pl.wikipedia.org/wiki/Liczba_doskona%C5%82a '''
 
+
 def is_perfect(n):
     div = [k for k in range(1, int((n + 2) / 2)) if n % k == 0]
     return sum(div) == n
@@ -159,6 +163,7 @@ import fractions
 """Funkcja powinna zwrócić wartość funkcji phi Eulera"""
 "" "The function should return the value of the phi Euler function" ""
 
+
 def phi_euler(n):
     amount = 0
     for k in range(1, n + 1):
@@ -172,7 +177,6 @@ print(phi_euler(6) == 2)
 print(phi_euler(64) == 32)
 print(phi_euler(97) == 96)
 print(' ')
-
 
 import re
 

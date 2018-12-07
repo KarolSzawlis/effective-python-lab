@@ -2,6 +2,7 @@
 """Filtruje z iterable elementy, dla których funkcja func zwraca False zostawiając pozostałe"""
 "" "Filters with iterable elements for which the function func returns False leaving the remaining" ""
 
+
 def _filter(func=None, iterable=[]):
     if func:
         for k in iterable:
@@ -44,6 +45,7 @@ print(' ')
 # exercise 3
 """Zwraca listę odwróconych słowa które nie są palindromami."""
 """Zwraca listę odwróconych słowa które nie są palindromami."""
+
 
 def reverse_nonpalindromes(words):
     return list(map(lambda w: w[::-1], filter(lambda w: w != w[::-1], words)))
@@ -89,6 +91,7 @@ print(' ')
 """Przepisz poniższą funkcję korzystając wyłącznie z funkcji reduce, map i filter oraz lambd"""
 "" "Rewrite the following function using only the reduce, map and filter and lambd functions"""
 
+
 def flatten(lists):
     return reduce(lambda x, y: x + y, lists)
 
@@ -102,6 +105,7 @@ print(' ')
 # exercise 7
 """Konwertuje liste temperatur w stopniach Celsjusza do skali Fahrenheita"""
 "" "Converts list of temperatures in degrees Celsius to Fahrenheit scale" ""
+
 
 def celsius_to_fahrenheit(x):
     return map(lambda yy: 1.8 * yy + 32, x)
@@ -134,6 +138,7 @@ from functools import reduce
 """Łączy słowa (o długości co najmniej k) z listy x w zdanie - nie używa reduce"""
 "" "Combines words (at least k length) from the list x in the sentence - does not use reduce" ""
 
+
 def create_sentence(x, k=0):
     return ' '.join(filter(lambda x: len(x) >= k, x))
 
@@ -148,6 +153,7 @@ print(' ')
   jeżeli ich suma jest większa niż parametr k"""
 """Returns the k-element tuple consisting of subsequent elements of the lists given as positional arguments,
    if their sum is greater than the parameter k """
+
 
 def tuple_if_sum_greater(k, *lists):
     return filter(lambda x: sum(x) > k, zip(*lists))
