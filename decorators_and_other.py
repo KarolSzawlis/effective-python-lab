@@ -1,4 +1,4 @@
-# zadanie 1
+# exercise 1
 def flow_rate(weight, time, units_per_kg=1000, period=60):
     if type(units_per_kg) is not int or type(period) is not int:
         raise TypeError
@@ -18,7 +18,7 @@ print("{0:.3} kg per second".format(flow))
 
 flow = flow_rate(weight, time)
 print("{0:.3} grams per minute".format(flow))
-# zadanie 2
+# exercise 2
 from time import time
 
 """ Wypisuje czas wywołania udekorowanej funckji """
@@ -57,7 +57,7 @@ n = 1000000
 l = squares_list(n)
 c = squares_comprehension(n)
 m = squares_map(n)
-# zadanie 3
+# exercise 3
 """
    Zwraca pochodną funkcji w punkcie, wg. wzoru f'(x) = [f(x+h) - f(x)]/h, 
    gdzie h jest parametrem dekoratora, jeśli nie zostanie podany, należy przyjąć 1000 * epsilon maszynowy
@@ -106,7 +106,7 @@ for x in [random() * 1000. for _ in range(20)]:
     print(f(x), 2 * x, '\t', test(f(x), 2 * x))
     print(g(x), 3 * x ** 2, '\t', test(g(x), 3 * x ** 2))
 
-# zadanie 4
+# exercise 4
 """Sprawdza czy udekorowanej funckji zostały podane odpowiednie parametry zdefiniowane 
        w argumentach dekoratora"""
 
@@ -157,7 +157,7 @@ except TypeError:
     print(True)
 
 
-# zadanie 5
+# exercise 5
 def returns(*types):
     def wrapper(function):
         def wrapper_f(*args, **kwargs):
@@ -198,7 +198,7 @@ except TypeError:
     print(True)
 
 
-# zadanie 8
+# exercise 8
 def my_function(x, y):
     return {
         1: y * y,
